@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI tests">
+    <test name="Калькулятор ипотеки" enabled="true">
+        <classes>
+            <class name="com.karine.tests.MortgageTest">
+                <parameter name="url" value="https://alfabank.ru/get-money/mortgage/ipotechnyj-kalkulyator/"/>
+                <parameter name="programType" value="Новостройка"/>
+                <parameter name="minCost" value="750000"/>
+                <parameter name="maxCost" value="87500000"/>
+                <parameter name="minInitialPercent" value="15"/>
+                <parameter name="maxInitialPercent" value="40"/>
+                <parameter name="minTerm" value="3"/>
+                <parameter name="maxTerm" value="30"/>
+            </class>
+
+        </classes>
+    </test>
+    <test name="Проверка расчета кэшбека" enabled="true">
+        <classes>
+            <class name="com.karine.tests.DebitCardCashBackTest">
+                <parameter name="url" value="https://alfabank.ru"/>
+                <parameter name="minSum" value="100000"/>
+                <parameter name="maxSum" value="250000"/>
+                <parameter name="rate" value="2"/>
+            </class>
+        </classes>
+    </test>
+</suite>
